@@ -1,1 +1,1 @@
-#### Dnscrypt
+# Dnscrypt
