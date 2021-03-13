@@ -33,7 +33,7 @@ Or it can be your devices private key when you know the other devices public key
 
 `: RSA key.private`
 
-`: PSK "Secret Passphrash"`
+`: PSK "Secret Passphrase"`
 
 #### strongswan.conf
 This file is mainly used for configuring strongswan's ike daemon, charon. 
