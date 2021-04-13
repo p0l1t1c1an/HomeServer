@@ -23,7 +23,7 @@ Both configs need match but inversed on the two machines establishing a tunnel.
 
 `forceencaps = yes | no`
 
-`auto = start | add`
+`auto = start | add | route`
 
 
 #### ipsec.secrets
