@@ -33,5 +33,5 @@ Inside the /etc/iked directory their are directories for public keys/certs and p
 as well a local.pub key. The local.pub key is used as this devices public key. As local.key, 
 in the private directory used as the local.key used as the private key. Finally, under pubkeys,
 there are directories fqdn and ipv4 (plus some more). This is where the foreign public key must go.
-It should be named the same as the `srcid` and should be in the respective location. So if the `srcid`
+It should be named the same as the `dstid` and should be in the respective location. So if the `dstid`
 is a domain name it should be under fqdn and if it is an ip it should be under ipv4.
