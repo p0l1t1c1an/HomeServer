@@ -1,5 +1,5 @@
 # HomeServer
-A repo to document my FreeBSD server and how to config and utilize these software running on it. 
+A repo to document my homeserver and how to config and utilize these software running on it. 
 
 ### How Documention is Handled
 
@@ -9,17 +9,25 @@ A repo to document my FreeBSD server and how to config and utilize these softwar
   - The Readme will go over the ideas of the s/s and describe the config files purpose
 - The s/s may not be what is permanently running on my FreeBSD server
   - Much of these, are for me to mess around with and get to understand how they work
-  - Then, if I want to reuse them, I have easy access to descriptive configurations and details
-- As well, I would like to work on many different OSes other than FreeBSD
-  - I would like to try setting up OpenBSD, a Linux Hypervisor, and maybe OmniOS
-  - Then, I can set up many different services and learn different ideas 
-- Finally, I am currently thinking about creating an OpenBSD router in Summer 2021
-  - So I am starting off with FreeBSD and migrating to OpenBSD for that purpose 
+  - Then, if I want to reuse them, I have easy access to descriptive configurations and details 
 
-### Why Document This on Github
-- This help remind me what I have created in the past and how to recreate it  
-- It allows me to easily reflect on what I have done and keep track of my growth
-  - I will be able to look back and see how far I am in the [Dunning-Kruger Effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect)
-  - Basically, a log file as I develop this project
-- I enjoy writing and planning things out, and that is quite literal all this repo is
-- As well, this is probably the simplest way that I can set this up that is techinally "permanent"
+### Plan of Action
+- As of right now, I thinking of swapping out FreeBSD with SmartOS and using it as a hypervisor. 
+  - What I like:
+    - SmartOS has quite a few things I'm familiar with on BSDs like bhyve
+    - Has an advanced system of Solaris' Zones/Containers that inspired by FreeBSD's jails
+    - Supports "Linux" containers by mimicking/emulating Linux syscalls so I won't need VMs if using something like docker  
+    - ZFS, which I absolutely love, but also other Solaris tools that I would love to learn like Crossbow and DTrace
+  - What I dislike:
+    - SmartOS wants to flex that it has KVM but also states that bhyve runs better so I'm a little confused about that
+      - My guess is KVM was first done by SmartOS then illumos ported bhyve, so now SmartOS has both 
+    - I think it uses iptables, but I really like and am very familiar w/ pf 
+- In the near future, maybe post-graduation, I want to "retire" this device and use it a desktop
+  - Then, I want to get the in homelab game with like 2-3 old rack servers, a NAS, and nice router
+  - Potential Services: 
+    - IPSec VPN to access private services and data
+    - Public website and blog
+    - Mail with anti-spam and the rest of the works 
+    - DNS + DNSCrypt and add it to the public list of DNSCrypt servers 
+    - Cgit/Gitlab instance and then just mirror to github
+    - Fuzzing VMs or Folding@Home / a similar distributed research system
