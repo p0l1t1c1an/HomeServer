@@ -1,0 +1,2 @@
+git_daemon:*:964:964:git daemon:/nonexistent:/usr/sbin/nologin
+git:*:9418:9418:Git User Account:/home/git:/usr/local/libexec/git-core/git-shell
